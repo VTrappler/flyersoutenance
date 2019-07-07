@@ -1,0 +1,75 @@
+\documentclass[a4paper]{leaflet}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{rotating}
+\begin{document}
+\begin{titlepage}
+  \title{
+    Soutenance de thèse d'Arnald Sengers
+    \date{19/07/2019} \\
+    \textsc{Schémas semi-implicites et de diffusion-redistanciation pour la dynamique des globules rouges.}\\[1cm]    
+    \includegraphics[width=0.5\textwidth]{crop}
+} % sous la direction de: \\
+% Emmanuel MAÎTRE
+% Mourad ISMAIL
+% Thibaut JECONNAISPASLENOM
+
+\end{titlepage}
+
+\maketitle
+
+\newpage
+\section*{Résumé}
+Dans ce travail, nous nous sommes intéressés à la mise en place de schémas semi- implicites pour l'amélioration des simulations numériques du déplacement d'un globule rouge dans le sang. Nous considérons la méthode levelset où l'interface fluide-structure est représentée comme la ligne de niveau 0 d'une fonction auxiliaire et le couplage est effectué en ajoutant un terme source dans l'équation fluide. Le principe de ces schémas semi-implicites est de prédire la position et la forme de la structure par une équation de la chaleur et d'utiliser cette prédiction pour obtenir un terme de force plus précis dans l'équation fluide. Ce type de schémas semi-implicites a d'abord été mis en place dans le cadre d'un système diphasique ou d'une membrane élastique immergée pour avoir des conditions moins restrictives sur le pas de temps que pour un couplage explicite. Cela a permis d'en choisir un plus grand et ainsi augmenter l'efficacité globale de l'algorithme complet par rapport à un schéma explicite classique. Afin d'étendre ce raisonnement au cas d'un globule rouge, nous proposons un algorithme pour simuler le flot de Willmore en dimensions 2 et 3. Notre méthode s'inspire des méthodes de mouvements d'interface générés par diffusion et nous arrivons à obtenir un flot non linéaire d'ordre 4 uniquement avec des résolutions d'équations de la chaleur. Pour assurer la conservation du volume et de l'aire d'un globule rouge, nous proposons ensuite une méthode de correction qui déplace légèrement l'interface afin de recoller aux contraintes. La combinaison des deux étapes précédentes décrit le comportement d'un globule rouge laissé au repos. Nous validons cette méthode en obtenant une forme d'équilibre d'un globule rouge. Nous proposons enfin un schéma semi-implicite dans le cas d'un globule rouge qui ouvre la voie vers l'utilisation de cette méthode comme prédicteur de l'algorithme de couplage complet.
+\section*{Résumé vulgarisé}
+Faire des simulations de globules rouge pose pleins de problèmes: un globule est élastique et donc sa forme a tendance à changer avec le temps et le fluide dans lequel il se trouve. Cela impose d'être très précautionneux quand on fait tourner ces simulations sur ordinateur, et donc cela prend très longtemps sur des machines puissantes. Heureusement, Arnaud a pu travailler dessus, ce qui permet d'être plus efficace.
+
+\section*{Déroulement de la soutenance}
+La soutenance se déroule en plusieurs étapes:
+\begin{itemize}
+\item la soutenance en elle-même ($\approx$ 40min)
+  le.la candidat.e présente de manière concise ses travaux.
+  \textbf{NE PAS APPLAUDIR À LA FIN DE LA PRÉSENTATION}
+  il est possible de partir à ce moment, car souvent les questions sont très pointues et la durée peut être variable
+\item les questions du jury ($\approx$ 30 min, 1h):
+  Le jury interroge le.la candidat.e sur ses travaux, sur la présentation et le manuscrit de thèse qu'il.elle leur aura envoyé auparavant.
+\item la délibération ($\approx$ 1h):
+  Le.la candidat peut souffler, pendant que le jury se réunit dans une pièce à part, afin de décider de l'obtention ou non du titre de docteur.e, mais aussi de l'appréciation inscrite sur le procès-verbal.
+\item l'annonce du résultat et les remerciements:
+  Le jury sort de la pièce, et énonce le contenu du PV. Le.la candidat.e peut maintenant faire ses remerciements
+\item le pot de thèse
+  le.la candidat.e part remercier personnellement les membres du jury, tandis qu'il est enfin possible de profiter du traditionnel buffet et des boissons. C'est aussi à ce moment là qu'il est possible de remarquer les gens qui n'ont pas assisté à la soutenance
+\end{itemize}
+\section*{Loisirs}
+Le temps peut parfois paraître un peu long durant cette demi-journée:
+
+\begin{itemize}
+\item Compter le nombre de fois que Arnaud dit ``Essentiellement'': $\dots$
+\end{itemize}
+
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{*3{|c}}
+    ``Flot de Willmore'' & Quinte de toux & Pause boisson  \\ \hline
+    Di
+  \end{tabular}
+  \caption{Bingo}
+\end{table}
+
+\begin{figure}
+  \caption{Aidez Arnaud à avoir sa thèse}
+\includegraphics{maz.png}
+\end{figure}
+
+
+
+
+\end{document}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
