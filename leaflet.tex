@@ -10,14 +10,13 @@
 \begin{document}
 \begin{titlepage}
   \title{
-    Soutenance de thèse d'Arnaud Sengers
-    \date{19/07/2019} \\
-    \textsc{Schémas semi-implicites et de diffusion-redistanciation pour la dynamique des globules rouges.}\\[1cm]    
+    Soutenance de thèse d'Emilie Buessler
+    \date{16/12/2019} \\
+    \textsc{Construction et Validation d'un Atlas Statistique 3D des Os Carpiens Humains.}\\[1cm]    
     \includegraphics[width=0.5\textwidth]{crop} \\
  sous la direction de: \\
-Emmanuel MAÎTRE \\
-Mourad ISMAIL \\
-Thibaut MÉTIVET
+Lionel REVERET \\
+Franck QUAINE \\
 }
 \end{titlepage}
 
@@ -25,9 +24,9 @@ Thibaut MÉTIVET
 
 \newpage
 \section*{Résumé}
-Dans ce travail, nous nous sommes intéressés à la mise en place de schémas semi-implicites pour l'amélioration des simulations numériques du déplacement d'un globule rouge dans le sang. Nous considérons la méthode levelset où l'interface fluide-structure est représentée comme la ligne de niveau 0 d'une fonction auxiliaire et le couplage est effectué en ajoutant un terme source dans l'équation fluide. Le principe de ces schémas semi-implicites est de prédire la position et la forme de la structure par une équation de la chaleur et d'utiliser cette prédiction pour obtenir un terme de force plus précis dans l'équation fluide. Ce type de schémas semi-implicites a d'abord été mis en place dans le cadre d'un système diphasique ou d'une membrane élastique immergée pour avoir des conditions moins restrictives sur le pas de temps que pour un couplage explicite. Cela a permis d'en choisir un plus grand et ainsi augmenter l'efficacité globale de l'algorithme complet par rapport à un schéma explicite classique. Afin d'étendre ce raisonnement au cas d'un globule rouge, nous proposons un algorithme pour simuler le flot de Willmore en dimensions 2 et 3. Notre méthode s'inspire des méthodes de mouvements d'interface générés par diffusion et nous arrivons à obtenir un flot non linéaire d'ordre 4 uniquement avec des résolutions d'équations de la chaleur. Pour assurer la conservation du volume et de l'aire d'un globule rouge, nous proposons ensuite une méthode de correction qui déplace légèrement l'interface afin de recoller aux contraintes. La combinaison des deux étapes précédentes décrit le comportement d'un globule rouge laissé au repos. Nous validons cette méthode en obtenant une forme d'équilibre d'un globule rouge. Nous proposons enfin un schéma semi-implicite dans le cas d'un globule rouge qui ouvre la voie vers l'utilisation de cette méthode comme prédicteur de l'algorithme de couplage complet.
+Le but de cette thèse est de permettre une capture anatomique fiable de la main humaine à partir d'une source vidéo, standard ou 3D, en s'appuyant sur un modèle biomécanique complet allant du poignet aux doigts, intégrant os, muscles, tendons et ligaments. Plusieurs modèles de la main existent déjà pour décrire la biomécanique des parties phalanges et métacarpienne, très peu ont été proposés pour la partie carpienne, aucun n'incluent les trois parties. Le fonctionnement complet de la main repose cependant sur une synergie de tous ces éléments. L'originalité scientifique du projet est donc de viser une modélisation complète, au-delà des modèles simplifiés utilisés en suivi automatique. Grâce à une collaboration internationale avec le département d'Orthopédie de Brown University (RI, USA), le projet a un accès privilégié à une source unique de données radiographiques. De plus, suite au projet EQUIPEX KINOVIS auquel participent UJF et INRIA, cet avantage expérimental sera prolongé par la récente mise en place d'une plateforme similaire d'analyse par rayons X du mouvement au LADAF (laboratoire d'Anatomie de l'UJF à la Faculté de Médecine). Par sa complexité et sa place au centre de l'activité humaine, la main reste un sujet scientifique majeur en biomécanique. Du fait de cette complexité, le développement de la connaissance scientifique dans ce domaine tend légitimement à se spécialiser sur certaines articulations. Dans le même temps, la recherche en informatique graphique a suscité le développement de solutions techniques sophistiquées en simulation physique pour améliorer le réalisme visuel des personnages de synthèse. La main fait partie de ces réalisations, avec un souci dans ce contexte de la représenter dans sa totalité. Le présent projet place donc l'ambition d'apporter à la biomécanique les avancées en simulation 3D, tout en ne se limitant pas à la qualité du réalisme visuel, mais en exigeant une validation exhaustive permise par un environnement expérimental novateur.
 \section*{Résumé vulgarisé}
-Faire des simulations de globules rouges pose plein de problèmes: un globule est élastique et donc sa forme a tendance à changer avec le temps et le fluide dans lequel il se trouve. Cela impose d'être très précautionneux quand on fait tourner ces simulations sur ordinateur, et donc cela prend très longtemps sur des machines puissantes. Heureusement, Arnaud a pu travailler dessus, ce qui permet d'être plus efficace.
+Savoir comment se placent les petits os de la main est une question compliquée car leur position dépend, entre autre, de celles de leurs voisins. Cependant, ça serait utile pour pouvoir, par exemple, les réparer (chirurgie, prothèses...). C'est ce qu'a fait Emilie pendant sa thèse, en utilisant des radios de main.
 
 \section*{Déroulement de la soutenance}
 La soutenance se déroule en plusieurs étapes:
@@ -82,7 +81,7 @@ Le temps peut parfois paraître un peu long durant cette demi-journée:
   \centering
   \renewcommand{\arraystretch}{1.5}
   \begin{adjustbox}{tabular=*3{|c}|,center} \hline
-    \og Flot de Willmore \fg{} & Quinte de toux & Pause boisson  \\ \hline
+    \og Instance \fg{} & Power pose & Pause boisson  \\ \hline
     Qqun s'endort & Case offerte!& Qqchose tombe \\ \hline
     Qqun en retard & Bruit de tablette & Chuchotements \\ \hline
   \end{adjustbox}
